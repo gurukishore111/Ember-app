@@ -1,0 +1,30 @@
+{{page-title 'Login'}}
+<h2>Login</h2>
+{{#if error}}
+  <h5>Invalid email or password</h5>
+{{/if}}
+<h2>gurukishore333@gmail.com</h2>
+<h2>password:123456</h2>
+<form {{on 'submit' this.login}}>
+  <label for='email'>Email</label>
+  <input
+    type='email'
+    id='email'
+    name='email'
+    name='email'
+    value={{this.email}}
+    {{on 'change' (fn this.update 'email')}}
+    placeholder='johndoe@gmail.com'
+  />
+  <label for='password'>password</label>
+  <input
+    type='password'
+    id='password'
+    value={{this.password}}
+    {{on 'change' (fn this.update 'password')}}
+    name='mobileNo'
+    placeholder='*****'
+  />
+  <input type='submit' value='Login' class='share button' />
+</form>
+{{outlet}}

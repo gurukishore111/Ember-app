@@ -1,0 +1,42 @@
+<form {{on 'submit' this.onsubmit}}>
+  <label for='firstName'>First Name</label>
+  <input
+    type='text'
+    id='firstName'
+    name='firstName'
+    value={{this.firstName}}
+    {{on 'change' (fn this.update 'firstName')}}
+    placeholder='John'
+  />
+
+  <label for='lastName'>Last Name</label>
+  <input
+    type='text'
+    id='lastName'
+    value={{this.lastName}}
+    name='lastname'
+    {{on 'change' (fn this.update 'lastName')}}
+    placeholder='Doe'
+  />
+
+  <label for='email'>Email</label>
+  <input
+    type='email'
+    id='email'
+    value={{this.email}}
+    name='email'
+    disabled
+    {{on 'change' (fn this.update 'email')}}
+    placeholder='johndoe@gmail.com'
+  />
+  <label for='mobileNo'>Mobile Number</label>
+  <input
+    type='text'
+    id='mobileNo'
+    name='mobileNo'
+    value={{this.mobileNo}}
+    {{on 'change' (fn this.update 'mobileNo')}}
+    placeholder='(+91) 123456789'
+  />
+  <input type='submit' value='Submit' class='share button' />
+</form>

@@ -1,0 +1,103 @@
+.modal-window {
+  position: fixed;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  &:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  & > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: white;
+    width: 50%;
+  }
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+  &:hover {
+    color: black;
+  }
+}
+.interior {
+  text-align: center;
+}
+.register-btn {
+  background: #016aba;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  font-weight: 700;
+}
+.btn-register-container {
+  margin: 42px;
+}
+a {
+  color: inherit;
+}
+
+.form-text {
+  text-align: center;
+}
+
+.modal-window {
+  & > div {
+    border-radius: 0.5rem;
+  }
+}
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+input[type='submit'] {
+  width: fit-content;
+}
+
+.align-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+
+  > span {
+    color: #016aba;
+  }
+}

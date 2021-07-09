@@ -1,0 +1,27 @@
+<nav class='menu'>
+  <LinkTo @route='index' class='menu-index'>
+    <h1>SuperRentals</h1>
+  </LinkTo>
+  <div class='links'>
+    <LinkTo @route='about' class='menu-about'>
+      About
+    </LinkTo>
+    <LinkTo @route='contact' class='menu-contact'>
+      Contact
+    </LinkTo>
+    <LinkTo @route='profile' class='menu-contact'>
+      Profile
+    </LinkTo>
+
+    {{#if this.session.isAuthenticated}}
+      <a class='menu-contact' {{on 'click' this.logout}}>
+        Logout 👋
+      </a>
+    {{else}}
+      <LinkTo @route='login' class='menu-contact'>
+        Login
+      </LinkTo>
+    {{/if}}
+
+  </div>
+</nav>
